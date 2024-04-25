@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ringen Kino</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="Kino3js.js"></script>
+</head>
+
+<body>
+<h1>Bestilling av kinobilett</h1>
+<form id="bestilling" onsubmit="innSkjema(); return false">
+  <div class="form-group">
+    <label for ="filmer">Velg film:</label>
+    <select id="filmer">
+      <option value="Velg film her">Velg film her</option>
+      <option value="Poor things">Poor things</option>
+      <option value="Octopussy">Octopussy</option>
+      <option value="Triangle of Sadeness">Triangle of Sadeness</option>
+    </select>
+  </div>
+  <br>
+  <br>
+  <div class="form-box">
+    <label for ="antallBilletter">Antall</label>
+    <input type="text" id="antallBilletter" onchange="validerAntall(this.value)"/>
+    <span id="feilAntall" style="color: red"></span>
+  </div>
+  <br>
+  <br>
+  <div class="form-box">
+    <label for ="fornavn">Fornavn</label>
+    <input type="text" id="fornavn" onchange="validerFornavn(this.value)"/>
+    <span id="feilFornavn" style="color: red"></span>
+  </div>
+
+  <div class="form-box">
+    <label for ="etternavn">Etternavn</label>
+    <input type="text" id="etternavn" onchange="validerEtternavn(this.value)"/>
+    <span id="feilEtternavn" style="color: red"></span>
+  </div>
+
+  <div class="form-box">
+    <label for ="telefonnr">Telefonnr</label>
+    <input type="text" id="telefonnr" onchange="validerTlf(this.value)"/>
+    <span id="feilTelefonnr" style="color: red"></span>
+  </div>
+
+  <div class="form-box">
+    <label for ="epost">Epost</label>
+    <input type="text" id="epost" onchange="validerEpost(this.value)"/>
+    <span id="feilEpost" style="color: red"></span>
+  </div>
+  <br>
+  <br>
+  <div class="form-group">
+    <input type="submit" id="kjop" value="Kjøp billett"/>
+  </div>
+</form>
+
+<br>
+<h2>Alle billetter</h2>
+<div id = "print"></div>
+<br>
+<input type ="button" id="slett" value="Slett alle billetter" onclick="slettAlle"/>
+
+</body>
+</html>
