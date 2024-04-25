@@ -2,7 +2,7 @@ OsloMet brukernavn: frihur7454
 
 Github brukernavn: FridaPH
 
-GitHub repo URL: 
+GitHub repo URL: https://github.com/FridaPH/testKino.git
 
 Fullt navn: Frida Preus Hurum
 
